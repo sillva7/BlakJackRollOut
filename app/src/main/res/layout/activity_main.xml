@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/amountOfDecks"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:gravity="center"
+        android:inputType="none"
+        android:text="0"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <Button
+        android:id="@+id/btnPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:onClick="plusDeck"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@id/amountOfDecks"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@id/amountOfDecks"
+        app:layout_constraintTop_toTopOf="@id/amountOfDecks" />
+
+    <Button
+        android:id="@+id/btnMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:onClick="minusDeck"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@id/amountOfDecks"
+
+        app:layout_constraintEnd_toStartOf="@id/amountOfDecks"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintTop_toTopOf="@id/amountOfDecks" />
+
+    <Button
+        android:id="@+id/takeCardHand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hand \nTake card"
+        app:layout_constraintEnd_toEndOf="@id/btnMinus"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMinus" />
+
+    <TextView
+        android:id="@+id/cardsOnHand"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Here will be cards on your hand"
+
+
+        app:layout_constraintEnd_toEndOf="@id/btnMinus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/takeCardHand"
+        />
+
+
+    <Button
+        android:id="@+id/takeCardDealer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dealer \nTake card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/btnPlus"
+        app:layout_constraintTop_toBottomOf="@+id/btnMinus" />
+    <TextView
+        android:id="@+id/amountOfCardsInDeck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/takeCardDealer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/takeCardDealer"
+        app:layout_constraintBottom_toBottomOf="@id/takeCardDealer"/>
+
+    <TextView
+        android:id="@+id/cardsOnDealer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Here will be dealer cards"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/btnPlus"
+        app:layout_constraintTop_toBottomOf="@id/takeCardHand"
+        />
+
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/amountOfDecks" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
