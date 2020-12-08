@@ -8,4 +8,19 @@ public class A_h extends CardHearts {
     private int points = 1;
     private int pointsAlt = 11;
 
+
+
+    @Override
+    public String getDenominal() {
+        return denominal;
+    }
+
+    @Override
+    public int getPoints() {
+        return points;
+    }
+
+    public int getPointsAlt() {
+        return pointsAlt;
+    }
 }
